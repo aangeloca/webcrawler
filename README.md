@@ -15,7 +15,7 @@ ________________________________________________________
 ## Metacritic.
 
 
-Site utilizado: (https://www.metacritic.com/)
+[SITE UTILIZADO](https://www.metacritic.com/)
 
 
 ## :video_game:  :film_projector:  :tv:  :camera:  :books:  
@@ -32,13 +32,17 @@ ________________________________________________________
 ## :computer:  :keyboard:  :computer_mouse: Estratégia utilizada para efetuar a coleta dos dados.
 
 
-Utilizamos para efetuar a seleção de dados da estrutura o Scrapy efetuar as buscas dentro de uma base de dados do Metacritic, que é um site de avaliação de filmes, jogos, cinema, entramos na categoria de jogos e colocamos o  buscador  aranha do crawler para buscar o título destes jogos e também a descrição dos mesmos, ele entra na página, aranha, e ela lê a aquela página e puxa os primeiros resultados dos títulos dos jogos e também a descrição dos mesmos.
+Utilizamos para efetuar a seleção de dados da estrutura o Scrapy, para podermos efetuar as buscas dentro de uma base de dados do Metacritic, que é um site de avaliação de filmes, jogos, cinema. 
 
-Na parte técnica do que o código desenvolvemos, mostramos como foi configurada a aranha, primeiramente importou  scrap a biblioteca para dentro do Python e foi criada uma classe chamada critic spyder pegando informação do scrap coloquei o nome de critic que é em relação a crítica o nome do site e ai tem outro atributo chamado allowed domains que é o domínio responsável por fazer a essa busca com subdiretório games 
+Entramos na categoria de jogos e colocamos o buscador aranha do crawler para buscar o título do mesmo, e também a descrição. A aranha entra na página efetua a leitura, subtraindo os primeiros resultados dos títulos citados acima.
 
-(https://github.com/aangeloca/webcrawler/blob/master/imagem/imagem_aranha.jpg)
+Na parte técnica que o código desenvolvido pelos integrantes, demonstra como foi a configuração da aranha. Primeiramente, importamos o scrapy da biblioteca para dentro do Python e foi criada uma classe chamada critic spyder, pegando informação do scrapy colocamos o nome critic que corresponde a crítica, concomitantes com o atributo chamado allowed domains que é o domínio responsável para efetuar as buscas com os subdiretórios games.
+
+![](https://github.com/aangeloca/webcrawler/blob/master/imagem/imagem_aranha.jpg)
 
 
-Foi aberto a url no (www.metacrict.com) para o crawler não sair abrindo outros links e ficou preso ao site da busca. Tem um parâmetro def parse self response com for dentro dele pegando atributo geral da página do css, então efetua a buscar dentro do css a tag t, r e a tabela, tabel roll a linha da tabela. 
+Em seguida demos um start na url no (www.metacrict.com) para o crawler não abrir quaisquer outros links e ficou ancorado ao site da busca. Usamos o parâmetro def parse(self, response) com for inserido e utilizando atributo geral da página do css. A partir daí efetuamos a busca dentro do css utilizando a tag tr concomitante a tabela, tabel roll a sua linha. 
 
-Pega a linha de cima e efetua uma varredura na mesma, ela busca qual o bloco css que vai efetuar a varredura. No comando yield que é basicamente onde ele vai exibir o nome titulo, como pode verificar na linha 13 critic ponto.css que é chamando o passe que foi criado, colocamos a tag H3 que é o titulo,  : : Text que é um atributo do tipo de texto e um get para pegar essas informações, a baixo a mesma coisa, efetuamos na descrição, chamamos o nome critic .css, pegamos a div sumário dentro da div, o nome desta div e colocamos um get para pegar todas as informações, e para finalizar, e fazer funcionar utilizamos o comando para rodar a aranha para efetuar a coleta dos dados e salvando os mesmos.
+Ao pegar a linha a cima e efetua uma varredura na mesma, ela busca qual bloco css vai efetuar a varredura. No comando yield que é basicamente onde ele vai exibir o nome titulo, como pode verificar na linha 13 critic ponto.css que é chamando o passe que foi criado, colocamos a tag H3 que é o titulo,  : : Text que é um atributo do tipo de texto e um get para pegar essas informações, a baixo a mesma coisa, efetuamos na descrição, chamamos o nome critic .css, pegamos a div sumário dentro da div, o nome desta div e colocamos um get para pegar todas as informações, e para finalizar, e fazer funcionar utilizamos o comando para rodar a aranha para efetuar a coleta dos dados e salvando os mesmos.
+
+________________________________________________________
